@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang=ru>
+
+<head>
+    <meta charset=utf-8>
+    <!--[if IE]>    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <link rel="shortcut icon" href=favicon.ico>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    
+    <link rel=stylesheet href=css/jquery.mCustomScrollbar.css>
+    <link rel=stylesheet href=css/style.css>
+    <!--[if lt IE 9]>    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+    <title>Войти</title>
+</head>
+
+<body>
+    <div class="_login wrapper" id=wrapper>
+        <main class=page id=main>
+            <div class=login>
+                <div class=login__container>
+                    <div class=login__content>
+                        <div class=login__header><a class=login__logo href=index.html>
+                                <picture>
+                                    <source srcset=images/logo.svg type=image/webp><img class=logo-img src=images/logo.svg alt="" loading=lazy>
+                                </picture><span class=logo-label>I-Pay24</span><span class=logo-text>Платежная система</span>
+                            </a></div>
+                        <form class="form form-one" id=form-login action=/ method=post novalidate>
+                            <div class=form__item><span class=form__label>Эл. почта</span>
+                                <div class=input-item> <label class=email-label for=email><i class="_icon-mail email-icon"></i></label> <input class=email-input id=email type=email name=email placeholder=Почта autocomplete=off><span class=error></span> </div>
+                            </div>
+                            <div class=form__item><span class=form__label>Пароль</span>
+                                <div class=input-item> <label class=password-label for=password><i class="_icon-lock password-icon"></i></label> <input class=password-input id=password type=password name=password placeholder=.................><span class=error></span> </div>
+                            </div> <button class="_icon-done form__btn" type=submit name=submit value=enter>Войти</button>
+                            <div class=form__footer><a class=form__registration-link href=registration.html>Регистрация</a><a class=form__forgot-password-link href=registration.html>Забыли пароль?</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js>
+        < script > window.jQuery || document.write('<script src="js/apps/jquery-1.11.0.min.js"><\/script>')
+    </script>
+    
+    <script src=js/apps/jquery.mCustomScrollbar.js></script>
+    <script src=js/index.js></script>
+</body>
+
+</html>

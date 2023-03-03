@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang=ru>
+
+<head>
+    <meta charset=utf-8>
+    <!--[if IE]>    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <link rel="shortcut icon" href=favicon.ico>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    
+    <link rel=stylesheet href=css/jquery.mCustomScrollbar.css>
+    <link rel=stylesheet href=css/style.css>
+    <!--[if lt IE 9]>    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+    <title>Транзакции</title>
+</head>
+
+<body>
+    <main class="dashboard wrapper">
+        <div class=dashboard__content> <button class="_icon-left dashboard__btn" type=button name=button></button>
+            <div class=dashboard__left><a class=dashboard__logo href=index.html>
+                    <picture>
+                        <source srcset=images/logo.svg type=image/webp><img class=dashboard__logo-img src=images/logo.svg alt="" loading=lazy>
+                    </picture><span class=dashboard__logo-text>I-Pay24</span>
+                </a>
+                <aside class="sidebar sidebar-two">
+                    <div class=sidebar-current-project>
+                        <div class=sidebar-icon><i class=_icon-path></i><i class=_icon-path-2></i></div>
+                        <div class=sidebar-current-items><strong class=sidebar-current-address>beybarisdesign.com</strong><span class=sidebar-current-id>ID: 2877525256</span></div>
+                    </div>
+                    <nav class=sidebar-nav>
+                        <ul class=sidebar-list>
+                            <li class="sidebar-item _active"><a class="sidebar-link _icon-pie" href=transactions.html>Транзакции</a></li>
+                            <li class=sidebar-item><a class="sidebar-link _icon-edit" href=edit.html>Редактирование</a></li>
+                            <li class=sidebar-item><a class="sidebar-link _icon-card" href=payment.html>Способы оплаты</a></li>
+                            <li class=sidebar-item><a class="sidebar-link _icon-copy" href=invoicing.html>Виджеты</a></li>
+                            <li class=sidebar-item><a class="sidebar-link _icon-left" href=dashboard-main.html>На главную</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+            </div>
+            <div class=dashboard__right>
+                <div class=dashboard__header>
+                    <h2 class=header-title>Транзакции</h2> <button class="_icon-tag-outline _open-modal header-btn" type=button name=open-modal value=open data-modal=1>Создать выплату</button>
+                    <div class=header-inner><span class=header-score>150₽</span>
+                        <div class=header-users><i class="_icon-user_circle header-icon-user"></i>
+                            <div class=header-users-list><span class=header-users-list-current>beybaris.balobolov@mail.ru</span>
+                                <ul class=header-list>
+                                    <li class=header-item><a class=header-link href="">beybaris.pizdobolov@mail.ru</a></li>
+                                    <li class=header-item><a class=header-link href="">beybaris.jopotryasov@mail.ru</a></li>
+                                    <li class=header-item><a class=header-link href="">beybaris.govnomesov@mail.ru</a></li>
+                                </ul>
+                            </div><i class="_icon-up header-icon-select"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class=dashboard__body>
+                    <div class=transactions>
+                        <div class=transactions__content>
+                            <div class="withdrawal transactions__tabs">
+                                <div class=tabs__header>
+                                    <div class=tabs__header-top>
+                                        <div class=tabs__left><i class="_icon-card tabs__icon"></i><span class=tabs__title>История выводов</span></div>
+                                        <div class=tabs__right>
+                                            <div class=tabs__nav>
+                                                <ul class="tabsS tabs__list" id=navList>
+                                                    <li class=tabs__list-item> <button class="tabs__link _active" type=button name=button data-filter=*>Все</button> </li>
+                                                    <li class=tabs__list-item> <button class=tabs__link type=button name=button data-filter=.paid>Выплачено</button> </li>
+                                                    <li class=tabs__list-item> <button class=tabs__link type=button name=button data-filter=.process>В процессе</button> </li>
+                                                    <li class=tabs__list-item> <button class=tabs__link type=button name=button data-filter=.rejected>Отклонено</button> </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="withdrawal tabs__header-bottom">
+                                        <ul class=tabs__header-list>
+                                            <li class="tabs__header-item tabs__header-item--first"><span class=tabs__header-title>Статус</span></li>
+                                            <li class="tabs__header-item tabs__header-item--second"><span class=tabs__header-title>#</span></li>
+                                            <li class=tabs__header-item><span class=tabs__header-title>Счет</span></li>
+                                            <li class=tabs__header-item><span class=tabs__header-title>Сумма</span></li>
+                                            <li class=tabs__header-item><span class=tabs__header-title>Дата</span></li>
+                                            <li class="tabs__header-item tabs__header-item--last"><span class=tabs__header-title>Доп. зн</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="withdrawal tabs__body">
+                                    <div class="_active tabs__tab">
+                                        <div class="tabs__item tabs__item_done paid">
+                                            <div class=tabs__item-icon><span class=tabs__item-mobile-title>Статус</span><i class=_icon-check></i></div>
+                                            <div class=tabs__item-slot><span class=tabs__item-mobile-title>#</span><strong class=tabs__item-num>#13462565446546546</strong></div>
+                                            <div class="tabs__item-slot tabs__item-slot--score"><span class=tabs__item-mobile-title>Счет</span>
+                                                <div class=tabs__item-logo>
+                                                    <picture>
+                                                        <source srcset=images/withdrawal/q-c.webp type=image/webp><img src=images/withdrawal/q-c.png alt="" loading=lazy>
+                                                    </picture>
+                                                </div><strong class=tabs__item-score>Электронный кошелек</strong>
+                                            </div>
+                                            <div class="tabs__item-slot tabs__item-slot--sum tabs__item-slot--sum-done"><span class=tabs__item-mobile-title>Сумма</span><strong class=tabs__item-cost>+2910.00 ₽</strong><i class="_icon-alarm tabs__item-clock"></i></div>
+                                            <div class="tabs__item-slot tabs__item-slot--date"><span class=tabs__item-mobile-title>Дата</span> <time class=tabs__item-date datetime=2020-01-26T22:07>26.01.20 в 22:07</time> </div>
+                                            <div class="tabs__item-slot tabs__item-slot--add"><span class=tabs__item-mobile-title>Доп. зн</span><i class="_icon-info tabs__item-add-icon"></i><i class="_icon-refresh tabs__item-update-icon"></i></div>
+                                        </div>
+                                        <div class="tabs__item tabs__item_update process">
+                                            <div class=tabs__item-icon><span class=tabs__item-mobile-title>Статус</span><i class=_icon-refresh></i></div>
+                                            <div class=tabs__item-slot><span class=tabs__item-mobile-title>#</span><strong class=tabs__item-num>#134625</strong></div>
+                                            <div class="tabs__item-slot tabs__item-slot--score"><span class=tabs__item-mobile-title>Счет</span>
+                                                <div class=tabs__item-logo>
+                                                    <picture>
+                                                        <source srcset=images/withdrawal/q-c.webp type=image/webp><img src=images/withdrawal/q-c.png alt="" loading=lazy>
+                                                    </picture>
+                                                </div><strong class=tabs__item-score>Электронный кошелек</strong>
+                                            </div>
+                                            <div class="tabs__item-slot tabs__item-slot--sum tabs__item-slot--sum-update"><span class=tabs__item-mobile-title>Сумма</span><strong class=tabs__item-cost>+5910.00 ₽</strong><i class="_icon-alarm tabs__item-clock"></i></div>
+                                            <div class="tabs__item-slot tabs__item-slot--date"><span class=tabs__item-mobile-title>Дата</span> <time class=tabs__item-date datetime=2020-01-26T22:07>26.01.20 в 22:07</time> </div>
+                                            <div class="tabs__item-slot tabs__item-slot--add"><span class=tabs__item-mobile-title>Доп. зн</span><i class="_icon-info tabs__item-add-icon"></i><i class="_icon-refresh tabs__item-update-icon"></i></div>
+                                        </div>
+                                        <div class="tabs__item tabs__item_delete rejected">
+                                            <div class=tabs__item-icon><span class=tabs__item-mobile-title>Статус</span><i class=_icon-close></i></div>
+                                            <div class=tabs__item-slot><span class=tabs__item-mobile-title>#</span><strong class=tabs__item-num>#134625</strong></div>
+                                            <div class="tabs__item-slot tabs__item-slot--score"><span class=tabs__item-mobile-title>Счет</span>
+                                                <div class=tabs__item-logo>
+                                                    <picture>
+                                                        <source srcset=images/withdrawal/q-c.webp type=image/webp><img src=images/withdrawal/q-c.png alt="" loading=lazy>
+                                                    </picture>
+                                                </div><strong class=tabs__item-score>Электронный кошелек</strong>
+                                            </div>
+                                            <div class="tabs__item-slot tabs__item-slot--sum tabs__item-slot--sum-delete"><span class=tabs__item-mobile-title>Сумма</span><strong class=tabs__item-cost>+0.00 ₽</strong><i class="_icon-alarm tabs__item-clock"></i></div>
+                                            <div class="tabs__item-slot tabs__item-slot--date"><span class=tabs__item-mobile-title>Дата</span> <time class=tabs__item-date datetime=2020-01-26T22:07>26.01.20 в 22:07</time> </div>
+                                            <div class="tabs__item-slot tabs__item-slot--add"><span class=tabs__item-mobile-title>Доп. зн</span><i class="_icon-info tabs__item-add-icon"></i><i class="_icon-refresh tabs__item-update-icon"></i></div>
+                                        </div>
+                                        <div class="tabs__item tabs__item_done paid">
+                                            <div class=tabs__item-icon><span class=tabs__item-mobile-title>Статус</span><i class=_icon-check></i></div>
+                                            <div class=tabs__item-slot><span class=tabs__item-mobile-title>#</span><strong class=tabs__item-num>#134625</strong></div>
+                                            <div class="tabs__item-slot tabs__item-slot--score"><span class=tabs__item-mobile-title>Счет</span>
+                                                <div class=tabs__item-logo>
+                                                    <picture>
+                                                        <source srcset=images/withdrawal/q-c.webp type=image/webp><img src=images/withdrawal/q-c.png alt="" loading=lazy>
+                                                    </picture>
+                                                </div><strong class=tabs__item-score>Электронный кошелек</strong>
+                                            </div>
+                                            <div class="tabs__item-slot tabs__item-slot--sum tabs__item-slot--sum-done"><span class=tabs__item-mobile-title>Сумма</span><strong class=tabs__item-cost>+2910.00 ₽</strong><i class="_icon-alarm tabs__item-clock"></i></div>
+                                            <div class="tabs__item-slot tabs__item-slot--date"><span class=tabs__item-mobile-title>Дата</span> <time class=tabs__item-date datetime=2020-01-26T22:07>26.01.20 в 22:07</time> </div>
+                                            <div class="tabs__item-slot tabs__item-slot--add"><span class=tabs__item-mobile-title>Доп. зн</span><i class="_icon-info tabs__item-add-icon"></i><i class="_icon-refresh tabs__item-update-icon"></i></div>
+                                        </div>
+                                        <div class="tabs__item tabs__item_update process">
+                                            <div class=tabs__item-icon><span class=tabs__item-mobile-title>Статус</span><i class=_icon-refresh></i></div>
+                                            <div class=tabs__item-slot><span class=tabs__item-mobile-title>#</span><strong class=tabs__item-num>#134625</strong></div>
+                                            <div class="tabs__item-slot tabs__item-slot--score"><span class=tabs__item-mobile-title>Счет</span>
+                                                <div class=tabs__item-logo>
+                                                    <picture>
+                                                        <source srcset=images/withdrawal/q-c.webp type=image/webp><img src=images/withdrawal/q-c.png alt="" loading=lazy>
+                                                    </picture>
+                                                </div><strong class=tabs__item-score>Электронный кошелек</strong>
+                                            </div>
+                                            <div class="tabs__item-slot tabs__item-slot--sum tabs__item-slot--sum-update"><span class=tabs__item-mobile-title>Сумма</span><strong class=tabs__item-cost>+5910.00 ₽</strong><i class="_icon-alarm tabs__item-clock"></i></div>
+                                            <div class="tabs__item-slot tabs__item-slot--date"><span class=tabs__item-mobile-title>Дата</span> <time class=tabs__item-date datetime=2020-01-26T22:07>26.01.20 в 22:07</time> </div>
+                                            <div class="tabs__item-slot tabs__item-slot--add"><span class=tabs__item-mobile-title>Доп. зн</span><i class="_icon-info tabs__item-add-icon"></i><i class="_icon-refresh tabs__item-update-icon"></i></div>
+                                        </div>
+                                        <div class="tabs__item tabs__item_delete rejected">
+                                            <div class=tabs__item-icon><span class=tabs__item-mobile-title>Статус</span><i class=_icon-close></i></div>
+                                            <div class=tabs__item-slot><span class=tabs__item-mobile-title>#</span><strong class=tabs__item-num>#134625</strong></div>
+                                            <div class="tabs__item-slot tabs__item-slot--score"><span class=tabs__item-mobile-title>Счет</span>
+                                                <div class=tabs__item-logo>
+                                                    <picture>
+                                                        <source srcset=images/withdrawal/q-c.webp type=image/webp><img src=images/withdrawal/q-c.png alt="" loading=lazy>
+                                                    </picture>
+                                                </div><strong class=tabs__item-score>Электронный кошелек</strong>
+                                            </div>
+                                            <div class="tabs__item-slot tabs__item-slot--sum tabs__item-slot--sum-delete"><span class=tabs__item-mobile-title>Сумма</span><strong class=tabs__item-cost>+0.00 ₽</strong><i class="_icon-alarm tabs__item-clock"></i></div>
+                                            <div class="tabs__item-slot tabs__item-slot--date"><span class=tabs__item-mobile-title>Дата</span> <time class=tabs__item-date datetime=2020-01-26T22:07>26.01.20 в 22:07</time> </div>
+                                            <div class="tabs__item-slot tabs__item-slot--add"><span class=tabs__item-mobile-title>Доп. зн</span><i class="_icon-info tabs__item-add-icon"></i><i class="_icon-refresh tabs__item-update-icon"></i></div>
+                                        </div>
+                                        <div class="tabs__item tabs__item_done">
+                                            <div class=tabs__item-icon><span class=tabs__item-mobile-title>Статус</span><i class=_icon-check></i></div>
+                                            <div class=tabs__item-slot><span class=tabs__item-mobile-title>#</span><strong class=tabs__item-num>#134625</strong></div>
+                                            <div class="tabs__item-slot tabs__item-slot--score"><span class=tabs__item-mobile-title>Счет</span>
+                                                <div class=tabs__item-logo>
+                                                    <picture>
+                                                        <source srcset=images/withdrawal/q-c.webp type=image/webp><img src=images/withdrawal/q-c.png alt="" loading=lazy>
+                                                    </picture>
+                                                </div><strong class=tabs__item-score>Электронный кошелек</strong>
+                                            </div>
+                                            <div class="tabs__item-slot tabs__item-slot--sum tabs__item-slot--sum-done"><span class=tabs__item-mobile-title>Сумма</span><strong class=tabs__item-cost>+2910.00 ₽</strong><i class="_icon-alarm tabs__item-clock"></i></div>
+                                            <div class="tabs__item-slot tabs__item-slot--date"><span class=tabs__item-mobile-title>Дата</span> <time class=tabs__item-date datetime=2020-01-26T22:07>26.01.20 в 22:07</time> </div>
+                                            <div class="tabs__item-slot tabs__item-slot--add"><span class=tabs__item-mobile-title>Доп. зн</span><i class="_icon-info tabs__item-add-icon"></i><i class="_icon-refresh tabs__item-update-icon"></i></div>
+                                        </div>
+                                        <div class="tabs__item tabs__item_update">
+                                            <div class=tabs__item-icon><span class=tabs__item-mobile-title>Статус</span><i class=_icon-refresh></i></div>
+                                            <div class=tabs__item-slot><span class=tabs__item-mobile-title>#</span><strong class=tabs__item-num>#134625</strong></div>
+                                            <div class="tabs__item-slot tabs__item-slot--score"><span class=tabs__item-mobile-title>Счет</span>
+                                                <div class=tabs__item-logo>
+                                                    <picture>
+                                                        <source srcset=images/withdrawal/q-c.webp type=image/webp><img src=images/withdrawal/q-c.png alt="" loading=lazy>
+                                                    </picture>
+                                                </div><strong class=tabs__item-score>Электронный кошелек</strong>
+                                            </div>
+                                            <div class="tabs__item-slot tabs__item-slot--sum tabs__item-slot--sum-update"><span class=tabs__item-mobile-title>Сумма</span><strong class=tabs__item-cost>+5910.00 ₽</strong><i class="_icon-alarm tabs__item-clock"></i></div>
+                                            <div class="tabs__item-slot tabs__item-slot--date"><span class=tabs__item-mobile-title>Дата</span> <time class=tabs__item-date datetime=2020-01-26T22:07>26.01.20 в 22:07</time> </div>
+                                            <div class="tabs__item-slot tabs__item-slot--add"><span class=tabs__item-mobile-title>Доп. зн</span><i class="_icon-info tabs__item-add-icon"></i><i class="_icon-refresh tabs__item-update-icon"></i></div>
+                                        </div>
+                                        <div class="tabs__item tabs__item_delete">
+                                            <div class=tabs__item-icon><span class=tabs__item-mobile-title>Статус</span><i class=_icon-close></i></div>
+                                            <div class=tabs__item-slot><span class=tabs__item-mobile-title>#</span><strong class=tabs__item-num>#134625</strong></div>
+                                            <div class="tabs__item-slot tabs__item-slot--score"><span class=tabs__item-mobile-title>Счет</span>
+                                                <div class=tabs__item-logo>
+                                                    <picture>
+                                                        <source srcset=images/withdrawal/q-c.webp type=image/webp><img src=images/withdrawal/q-c.png alt="" loading=lazy>
+                                                    </picture>
+                                                </div><strong class=tabs__item-score>Электронный кошелек</strong>
+                                            </div>
+                                            <div class="tabs__item-slot tabs__item-slot--sum tabs__item-slot--sum-delete"><span class=tabs__item-mobile-title>Сумма</span><strong class=tabs__item-cost>+0.00 ₽</strong><i class="_icon-alarm tabs__item-clock"></i></div>
+                                            <div class="tabs__item-slot tabs__item-slot--date"><span class=tabs__item-mobile-title>Дата</span> <time class=tabs__item-date datetime=2020-01-26T22:07>26.01.20 в 22:07</time> </div>
+                                            <div class="tabs__item-slot tabs__item-slot--add"><span class=tabs__item-mobile-title>Доп. зн</span><i class="_icon-info tabs__item-add-icon"></i><i class="_icon-refresh tabs__item-update-icon"></i></div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class=modal data-modal=1>
+        <div class=modal__overflow>
+            <div class=modal__content>
+                <div class=modal__header><i class="_icon-tag-outline modal__icon"></i><span class=modal__title>Вывод средств</span> <button class="_icon-close _close-modal modal__close" type=button name=close value=close></button> </div>
+                <div class=modal__body>
+                    <form class="form form-modal modal__form" id=form-modal action=/ method=post novalidate>
+                        <div class=form__item><span class=form__label>Система для выплаты</span>
+                            <div class="input-item input-item--select">
+                                <div class=select-box>
+                                    <div class=options-container>
+                                        <div class=options-overflow>
+                                            <div class=option> <input class=radio id=QIWI type=radio name=category> <label for=QIWI><span class=icon-option> <svg xmlns=http://www.w3.org/2000/svg preserveAspectRatio=none viewBox="0 0 42 42">
+                                                            <path id=fill fill=currentColor d="M 18.5,-0.5 C 20.5,-0.5 22.5,-0.5 24.5,-0.5C 39.4313,4.36083 44.598,14.3608 40,29.5C 39,30.5 38,31.5 37,32.5C 35.9783,31.646 35.1449,30.646 34.5,29.5C 35.8334,28.3801 36.3334,27.0468 36,25.5C 34.2002,23.683 32.0336,22.5163 29.5,22C 30.8646,20.3181 32.3646,20.1514 34,21.5C 34.2264,12.9711 30.0598,8.30447 21.5,7.5C 8.74993,11.3336 6.08326,18.8336 13.5,30C 15.9088,31.7068 18.5755,32.5402 21.5,32.5C 21.3433,31.1266 21.51,29.7932 22,28.5C 24.3706,31.206 27.0372,33.5394 30,35.5C 30.49,34.2068 30.6567,32.8734 30.5,31.5C 34.6246,31.7226 35.2912,33.2226 32.5,36C 36.9042,36.7011 40.5709,38.7011 43.5,42C 34.6352,40.8609 25.6352,40.1943 16.5,40C 2.28294,34.0554 -1.88373,23.8887 4,9.5C 7.6403,4.34753 12.4736,1.0142 18.5,-0.5 Z"></path>
+                                                        </svg></span><span>QIWI</span></label> </div>
+                                            <div class=option> <input class=radio id=BankCard type=radio name=category> <label for=BankCard>Банковские карты</label> </div>
+                                            <div class=option> <input class=radio id=YaMoney type=radio name=category> <label for=YaMoney>Яндекс. Деньги</label> </div>
+                                            <div class=option> <input class=radio id=Bitcoin type=radio name=category> <label for=Bitcoin>Bitcoin</label> </div>
+                                        </div>
+                                    </div>
+                                    <div class=selected>Система для выплаты</div>
+                                </div><span class=error></span>
+                            </div>
+                        </div>
+                        <div class=form__item><span class=form__label>Реквизиты для вывода</span>
+                            <div class=input-item> <label class=email-label for=score><i class="_icon-phone email-icon"></i></label> <input class=email-input id=score name=score placeholder=000000.... autocomplete=off><span class=error></span> </div>
+                        </div>
+                        <div class=form__item><span class=form__label>Сумма вывода</span>
+                            <div class=input-item> <label class=password-label for=amount><i class="_icon-balance password-icon"></i></label> <input class=password-input id=amount name=amount placeholder=0.00><span class=error></span> </div>
+                        </div>
+                        <div class=form__item><span class=form__label>Комиссия</span>
+                            <div class="input-item input-item--select">
+                                <div class=select-box>
+                                    <div class=options-container>
+                                        <div class=options-overflow>
+                                            <div class=option> <input class=radio id=0 type=radio name=commission> <label for=0>0%</label> </div>
+                                            <div class=option> <input class=radio id=1 type=radio name=" commission"> <label for=1>1%</label> </div>
+                                            <div class=option> <input class=radio id=10 type=radio name=" commission"> <label for=10>10%</label> </div>
+                                            <div class=option> <input class=radio id=50 type=radio name=" commission"> <label for=50>50%</label> </div>
+                                            <div class=option> <input class=radio id=100 type=radio name=" commission"> <label for=100>100%</label> </div>
+                                        </div>
+                                    </div>
+                                    <div class="selected selected-2">Комиссия с платежа</div>
+                                </div><span class=error></span>
+                            </div>
+                        </div>
+                        <div class=form__footer> <button class="_icon-tag-outline form__btn" type=submit name=submit value=enter>Создать выплату</button>
+                            <div class=form__footer-items>
+                                <div class=form__footer-item><span class=form__footer-label>Спишется</span><span class=form__footer-num>156.06 ₽</span></div>
+                                <div class=form__footer-item><span class=form__footer-label>Придёт</span><span class=form__footer-num>153.48 ₽</span></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js></script>
+    <script>
+        window.jQuery || document.write('<script src="js/apps/jquery-1.11.0.min.js"><\/script>')
+    </script>
+    <script src=js/apps/jquery.mCustomScrollbar.js></script>
+    <script src=https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js></script>
+    <script src=js/apps/izotope.min.js></script>
+    <script src=js/index.js></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang=ru>
+
+<head>
+    <meta charset=utf-8>
+    <!--[if IE]>    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <link rel="shortcut icon" href=favicon.ico>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    
+    <link rel=stylesheet href=css/jquery.mCustomScrollbar.css>
+    <link rel=stylesheet href=css/style.css>
+    <!--[if lt IE 9]>    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+    <title>Регистрация</title>
+</head>
+
+<body>
+    <div class="_registration wrapper" id=wrapper>
+        <main class=page id=main>
+            <div class=login>
+                <div class=login__container>
+                    <div class=login__content>
+                        <div class=login__header><a class=login__logo href=index.html>
+                                <picture>
+                                    <source srcset=images/logo.svg type=image/webp><img class=logo-img src=images/logo.svg alt="" loading=lazy>
+                                </picture><span class=logo-label>I-Pay24</span><span class=logo-text>Платежная система</span>
+                            </a></div>
+                        <form class="form form-two" id=form-registration action=/ method=post novalidate>
+                            <div class=form__item><span class=form__label>Эл. почта</span>
+                                <div class=input-item> <label class=email-label for=email-registration><i class="_icon-mail email-icon"></i></label> <input class=email-input id=email-registration type=email name=email--registration placeholder=Почта autocomplete=off> </div>
+                            </div>
+                            <div class=form__item><span class=form__label>Пароль</span>
+                                <div class=input-item> <label class=password-label for=password-registration><i class="_icon-lock password-icon"></i></label> <input class=password-input id=password-registration type=password name=password--registration placeholder=................. autocomplete=off> </div>
+                            </div>
+                            <div class=form__item><span class=form__label>Пвторите пароль</span>
+                                <div class=input-item> <label class=password-label for=password-registration-two><i class="_icon-lock password-icon"></i></label> <input class="password-input password-input--two" id=password-registration-two type=password name=password--registration placeholder=.................> </div>
+                            </div>
+                            <p class=form__text>Нажимая кнопку “Регистрация” вы автоматически соглаша-етесь с условиями <a class=form__offers href="">договора оферты.</a></p> <button class="_icon-done form__btn" type=submit name=submit value=enter>Регистрация</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js>
+        < script > window.jQuery || document.write('<script src="js/apps/jquery-1.11.0.min.js"><\/script>')
+    </script>
+    
+    <script src=js/apps/jquery.mCustomScrollbar.js></script>
+    <script src=js/index.js></script>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang=ru>
+
+<head>
+    <meta charset=utf-8>
+    <!--[if IE]>    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <link rel="shortcut icon" href=favicon.ico>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    
+    <link rel=stylesheet href=css/jquery.mCustomScrollbar.css>
+    <link rel=stylesheet href=css/style.css>
+    <!--[if lt IE 9]>    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+    <title>Редактирование</title>
+</head>
+
+<body>
+    <main class="dashboard wrapper">
+        <div class=dashboard__content> <button class="_icon-left dashboard__btn" type=button name=button></button>
+            <div class=dashboard__left><a class=dashboard__logo href=index.html>
+                    <picture>
+                        <source srcset=images/logo.svg type=image/webp><img class=dashboard__logo-img src=images/logo.svg alt="" loading=lazy>
+                    </picture><span class=dashboard__logo-text>I-Pay24</span>
+                </a>
+                <aside class="sidebar sidebar-two">
+                    <div class=sidebar-current-project>
+                        <div class=sidebar-icon><i class=_icon-path></i><i class=_icon-path-2></i></div>
+                        <div class=sidebar-current-items><strong class=sidebar-current-address>beybarisdesign.com</strong><span class=sidebar-current-id>ID: 2877525256</span></div>
+                    </div>
+                    <nav class=sidebar-nav>
+                        <ul class=sidebar-list>
+                            <li class=sidebar-item><a class="sidebar-link _icon-pie" href=transactions.html>Транзакции</a></li>
+                            <li class="sidebar-item _active"><a class="sidebar-link _icon-edit" href=edit.html>Редактирование</a></li>
+                            <li class=sidebar-item><a class="sidebar-link _icon-card" href=payment.html>Способы оплаты</a></li>
+                            <li class=sidebar-item><a class="sidebar-link _icon-copy" href=invoicing.html>Виджеты</a></li>
+                            <li class=sidebar-item><a class="sidebar-link _icon-left" href=dashboard-main.html>На главную</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+            </div>
+            <div class=dashboard__right>
+                <div class=dashboard__header>
+                    <h2 class=header-title>Редактирование</h2> <button class="_icon-tag-outline _open-modal header-btn" type=button name=open-modal value=open data-modal=1>Создать выплату</button>
+                    <div class=header-inner><span class=header-score>150₽</span>
+                        <div class=header-users><i class="_icon-user_circle header-icon-user"></i>
+                            <div class=header-users-list><span class=header-users-list-current>beybaris.balobolov@mail.ru</span>
+                                <ul class=header-list>
+                                    <li class=header-item><a class=header-link href="">beybaris.pizdobolov@mail.ru</a></li>
+                                    <li class=header-item><a class=header-link href="">beybaris.jopotryasov@mail.ru</a></li>
+                                    <li class=header-item><a class=header-link href="">beybaris.govnomesov@mail.ru</a></li>
+                                </ul>
+                            </div><i class="_icon-up header-icon-select"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class=dashboard__body>
+                    <div class=edit>
+                        <div class=edit__content>
+                            <div class="edit__block -block-one">
+                                <div class=edit__block-header><i class="edit__block-icon _icon-user_circle"></i><span class=edit__block-title>Аватарка</span></div>
+                                <div class=edit__block-body>
+                                    <div class=edit__block-picture><i class="_icon-download edit__block-picture-icon"></i>
+                                        <picture>
+                                            <source srcset=images/logo.svg type=image/webp><img class=edit__block-img src=images/logo.svg alt="" loading=lazy>
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="edit__block -block-two">
+                                <div class=edit__block-header><i class="edit__block-icon _icon-calendar_week"></i><span class=edit__block-title>Основные</span></div>
+                                <div class=edit__block-body>
+                                    <form class="form edit__form edit__form-main">
+                                        <div class=form__items>
+                                            <div class=form__item><span class=form__label>Система для выплаты</span>
+                                                <div class="input-item input-item--select">
+                                                    <div class="select-box select-box--currency">
+                                                        <div class=options-container>
+                                                            <div class=options-overflow>
+                                                                <div class=option> <input class=radio id=url1 type=radio name=url> <label for=url1>https://a</label> </div>
+                                                                <div class=option> <input class=radio id=url2 type=radio name=url> <label for=url2>https://b</label> </div>
+                                                                <div class=option> <input class=radio id=url3 type=radio name=url> <label for=url3>https://c</label> </div>
+                                                                <div class=option> <input class=radio id=url4 type=radio name=url> <label for=url4>https://d</label> </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class=selected>Система для выплаты</div>
+                                                    </div><span class=error></span>
+                                                </div>
+                                            </div>
+                                            <div class=form__item><span class=form__label>Домен</span>
+                                                <div class=input-item> <label class=email-label for=domain><i class="email-icon _icon-transfer"></i></label> <input class=email-input id=domain name=domain placeholder=beybaris-design.сom autocomplete=off><span class=error></span> </div>
+                                            </div>
+                                        </div>
+                                        <div class=form__item><span class=form__label>Название сайта</span>
+                                            <div class=input-item> <label class=email-label for=site><i class="email-icon _icon-calendar"></i></label> <input class=email-input id=site name=site placeholder=beybaris-design.сom autocomplete=off><span class=error></span> </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="edit__block -block-three">
+                                <div class=edit__block-header><i class="edit__block-icon _icon-link"></i><span class=edit__block-title>Пароль и ключ</span></div>
+                                <div class=edit__block-body>
+                                    <form class="form edit__form edit__form-pass">
+                                        <div class=form__item><span class=form__label>Секретный пароль</span>
+                                            <div class=input-item> <label class=email-label for=secret></label> <input class=email-input id=secret name=secret placeholder=AafaFWgmk24NKrQRlg autocomplete=off> <button class="_icon-refresh edit__form-btn" type=button name=button value=button></button><span class=error></span> </div>
+                                        </div>
+                                        <div class=form__item><span class=form__label>Дополнительный ключ</span>
+                                            <div class=input-item> <label class=email-label for=secret-two></label> <input class=email-input id=secret-two name=secret-two placeholder=AafaFWgmk24NKrQRlg autocomplete=off> <button class="_icon-refresh edit__form-btn" type=button name=button value=button></button><span class=error></span> </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="edit__block -block-four">
+                                <div class=edit__block-header><i class="edit__block-icon _icon-share"></i><span class=edit__block-title>URL на ресурсы</span></div>
+                                <div class=edit__block-body>
+                                    <form class="form edit__form edit__form-url" id=urlForm>
+                                        <div class=form__item><span class="form__label form__label_info">URL webhook</span>
+                                            <div class=input-item> <label class="email-label email-label--share" for=url><i class="email-icon _icon-share"></i></label> <input class=email-input id=url name=url placeholder=URL autocomplete=off><span class=error></span> </div>
+                                        </div>
+                                        <div class=form__item><span class=form__label>URL успешной оплаты</span>
+                                            <div class=input-item> <label class="email-label email-label--check" for=successful><i class="email-icon _icon-check"></i></label> <input class=email-input id=successful name=successful placeholder=onehost.ru/panel autocomplete=off><span class=error></span> </div>
+                                        </div>
+                                        <div class=form__item><span class=form__label>URL успешной оплаты</span>
+                                            <div class=input-item> <label class="email-label email-label--close" for=successful-two><i class="email-icon _icon-close"></i></label> <input class=email-input id=successful-two name=successful-two placeholder=onehost.ru/panel autocomplete=off><span class=error></span> </div>
+                                        </div>
+                                        <div class=form__item><span class=form__label>Кто платит комиссию</span>
+                                            <div class="input-item input-item--select">
+                                                <div class="select-box select-box--change">
+                                                    <div class="options-container options-container--change">
+                                                        <div class=options-overflow>
+                                                            <div class="option option-change"> <input class=radio id=client1 type=radio name=client> <label for=client1>https://Клиент</label> </div>
+                                                            <div class="option option-change"> <input class=radio id=client2 type=radio name=client> <label for=client2>https://Клиент</label> </div>
+                                                            <div class="option option-change"> <input class=radio id=client3 type=radio name=client> <label for=client3>https://Клиент</label> </div>
+                                                            <div class="option option-change"> <input class=radio id=client4 type=radio name=client> <label for=client4>https://Клиент</label> </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="selected selected-change">Кто платит комиссию</div>
+                                                </div><span class=error></span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class=modal data-modal=1>
+        <div class=modal__overflow>
+            <div class=modal__content>
+                <div class=modal__header><i class="_icon-tag-outline modal__icon"></i><span class=modal__title>Вывод средств</span> <button class="_icon-close _close-modal modal__close" type=button name=close value=close></button> </div>
+                <div class=modal__body>
+                    <form class="form form-modal modal__form" id=form-modal action=/ method=post novalidate>
+                        <div class=form__item><span class=form__label>Система для выплаты</span>
+                            <div class="input-item input-item--select">
+                                <div class=select-box>
+                                    <div class=options-container>
+                                        <div class=options-overflow>
+                                            <div class=option> <input class=radio id=QIWI type=radio name=category> <label for=QIWI><span class=icon-option> <svg xmlns=http://www.w3.org/2000/svg preserveAspectRatio=none viewBox="0 0 42 42">
+                                                            <path id=fill fill=currentColor d="M 18.5,-0.5 C 20.5,-0.5 22.5,-0.5 24.5,-0.5C 39.4313,4.36083 44.598,14.3608 40,29.5C 39,30.5 38,31.5 37,32.5C 35.9783,31.646 35.1449,30.646 34.5,29.5C 35.8334,28.3801 36.3334,27.0468 36,25.5C 34.2002,23.683 32.0336,22.5163 29.5,22C 30.8646,20.3181 32.3646,20.1514 34,21.5C 34.2264,12.9711 30.0598,8.30447 21.5,7.5C 8.74993,11.3336 6.08326,18.8336 13.5,30C 15.9088,31.7068 18.5755,32.5402 21.5,32.5C 21.3433,31.1266 21.51,29.7932 22,28.5C 24.3706,31.206 27.0372,33.5394 30,35.5C 30.49,34.2068 30.6567,32.8734 30.5,31.5C 34.6246,31.7226 35.2912,33.2226 32.5,36C 36.9042,36.7011 40.5709,38.7011 43.5,42C 34.6352,40.8609 25.6352,40.1943 16.5,40C 2.28294,34.0554 -1.88373,23.8887 4,9.5C 7.6403,4.34753 12.4736,1.0142 18.5,-0.5 Z"></path>
+                                                        </svg></span><span>QIWI</span></label> </div>
+                                            <div class=option> <input class=radio id=BankCard type=radio name=category> <label for=BankCard>Банковские карты</label> </div>
+                                            <div class=option> <input class=radio id=YaMoney type=radio name=category> <label for=YaMoney>Яндекс. Деньги</label> </div>
+                                            <div class=option> <input class=radio id=Bitcoin type=radio name=category> <label for=Bitcoin>Bitcoin</label> </div>
+                                        </div>
+                                    </div>
+                                    <div class=selected>Система для выплаты</div>
+                                </div><span class=error></span>
+                            </div>
+                        </div>
+                        <div class=form__item><span class=form__label>Реквизиты для вывода</span>
+                            <div class=input-item> <label class=email-label for=score><i class="email-icon _icon-phone"></i></label> <input class=email-input id=score name=score placeholder=000000.... autocomplete=off><span class=error></span> </div>
+                        </div>
+                        <div class=form__item><span class=form__label>Сумма вывода</span>
+                            <div class=input-item> <label class=password-label for=amount><i class="_icon-balance password-icon"></i></label> <input class=password-input id=amount name=amount placeholder=0.00><span class=error></span> </div>
+                        </div>
+                        <div class=form__item><span class=form__label>Комиссия</span>
+                            <div class="input-item input-item--select">
+                                <div class=select-box>
+                                    <div class=options-container>
+                                        <div class=options-overflow>
+                                            <div class=option> <input class=radio id=0 type=radio name=commission> <label for=0>0%</label> </div>
+                                            <div class=option> <input class=radio id=1 type=radio name=" commission"> <label for=1>1%</label> </div>
+                                            <div class=option> <input class=radio id=10 type=radio name=" commission"> <label for=10>10%</label> </div>
+                                            <div class=option> <input class=radio id=50 type=radio name=" commission"> <label for=50>50%</label> </div>
+                                            <div class=option> <input class=radio id=100 type=radio name=" commission"> <label for=100>100%</label> </div>
+                                        </div>
+                                    </div>
+                                    <div class="selected selected-2">Комиссия с платежа</div>
+                                </div><span class=error></span>
+                            </div>
+                        </div>
+                        <div class=form__footer> <button class="_icon-tag-outline form__btn" type=submit name=submit value=enter>Создать выплату</button>
+                            <div class=form__footer-items>
+                                <div class=form__footer-item><span class=form__footer-label>Спишется</span><span class=form__footer-num>156.06 ₽</span></div>
+                                <div class=form__footer-item><span class=form__footer-label>Придёт</span><span class=form__footer-num>153.48 ₽</span></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js></script>
+    <script>
+        window.jQuery || document.write('<script src="js/apps/jquery-1.11.0.min.js"><\/script>')
+    </script>
+    <script src=js/apps/jquery.mCustomScrollbar.js></script>
+    <script src=https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js></script>
+    <script src=js/apps/izotope.min.js></script>
+    <script src=js/index.js></script>
+</body>
+
+</html>
